@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 466252250964659655}
   - component: {fileID: 5973683641859099313}
   - component: {fileID: 1477456233935489663}
-  - component: {fileID: 714042987335651741}
   m_Layer: 0
   m_Name: H2O2
-  m_TagString: Untagged
+  m_TagString: H2O2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,15 +98,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 13, y: 8}
   m_Direction: 1
---- !u!114 &714042987335651741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8291828104368950940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217783c8653d1e5449e11ae35543cd48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

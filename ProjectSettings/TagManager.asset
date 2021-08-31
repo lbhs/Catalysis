@@ -40,6 +40,8 @@ TagManager:
   - Nitrogen
   - Catalyst
   - AnimatedComplex
+  - OH_Radical
+  - H2O2
   layers:
   - Default
   - TransparentFX

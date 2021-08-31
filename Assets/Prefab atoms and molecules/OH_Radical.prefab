@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2291463833905466639}
   - component: {fileID: 8726758874839401445}
+  - component: {fileID: 6031332712520012482}
   m_Layer: 0
   m_Name: OH_Radical
-  m_TagString: Untagged
+  m_TagString: OH_Radical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,3 +82,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &6031332712520012482
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8181462228164575020}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.2842277, y: -0.05014996}
+  m_Size: {x: 11.343424, y: 7.3228245}
+  m_Direction: 1

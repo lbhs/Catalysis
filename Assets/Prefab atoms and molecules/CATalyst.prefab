@@ -137,8 +137,8 @@ MonoBehaviour:
   CatalystReactionProduct: {fileID: 7402937313184722704, guid: 797305409929c5d459ebcc76cc8a592a,
     type: 3}
   CatalystPosition: {x: 0, y: 0}
-  Step1Animation: {fileID: 5135500790588641885, guid: 797305409929c5d459ebcc76cc8a592a,
-    type: 3}
+  AnimatedComplexForThisStep: {fileID: 0}
+  SubstrateTag: H2O2
 --- !u!114 &1694257560318560348
 MonoBehaviour:
   m_ObjectHideFlags: 0

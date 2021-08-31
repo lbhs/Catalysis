@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7697495093506731603}
   - component: {fileID: 3927770048077024433}
   - component: {fileID: 5344797193203922832}
+  - component: {fileID: 8723345214975670424}
   m_Layer: 0
   m_Name: CatalystOH
   m_TagString: Untagged
@@ -106,11 +107,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.9628698, y: 3.5997365}
-  m_Size: {x: 11.692136, y: 15.984855}
+  m_Offset: {x: 0.8458042, y: -0.17989704}
+  m_Size: {x: 8.765528, y: 17.907814}
   m_Direction: 0
 --- !u!50 &5344797193203922832
 Rigidbody2D:
@@ -133,3 +134,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8723345214975670424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584963501239235082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19255b731523ec469ef1a8de5a54fc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CatalystReactionProduct: {fileID: 7402937313184722704, guid: 8140b1ab5e8c0a74ab193dbbf16aa3ba,
+    type: 3}
+  CatalystPosition: {x: 0, y: 0}
+  AnimatedComplexForThisStep: {fileID: 2805204500039700453, guid: 8140b1ab5e8c0a74ab193dbbf16aa3ba,
+    type: 3}
+  SubstrateTag: OH_Radical

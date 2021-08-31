@@ -66,8 +66,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70facf51c5bff9641a836887bc8f0c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CatalystOH: {fileID: 1584963501239235082, guid: 745bb14d12b5cc14f8c18da6974363e6,
+  NextCatalystModel: {fileID: 1584963501239235082, guid: 745bb14d12b5cc14f8c18da6974363e6,
     type: 3}
+  NextCatalystModelOffset: {x: -0.54, y: 1.5, z: 0}
+  NextSubstrateModel: {fileID: 8181462228164575020, guid: 04b747309f76cfd47a64aa2bb8517767,
+    type: 3}
+  NextSubstrateModelOffset: {x: 2, y: 6.5, z: 0}
+  EulerAnglesForSubstrateModel: {x: 0, y: 0, z: 180}
 --- !u!1001 &5050098097261033655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135,7 +140,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: OH_RadicalB (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1735371097735214810, guid: 04b747309f76cfd47a64aa2bb8517767, type: 3}
+    - {fileID: 2264475250845898496, guid: 04b747309f76cfd47a64aa2bb8517767, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 04b747309f76cfd47a64aa2bb8517767, type: 3}
 --- !u!4 &6474319471875569080 stripped
 Transform:
@@ -210,7 +217,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: OH_RadicalB
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1735371097735214810, guid: 04b747309f76cfd47a64aa2bb8517767, type: 3}
+    - {fileID: 2264475250845898496, guid: 04b747309f76cfd47a64aa2bb8517767, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 04b747309f76cfd47a64aa2bb8517767, type: 3}
 --- !u!4 &6451681519011785268 stripped
 Transform:
