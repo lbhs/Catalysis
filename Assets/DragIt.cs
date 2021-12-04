@@ -30,14 +30,17 @@ public class DragIt : MonoBehaviour
 
     public void OnMouseUp()
     {
-        
+        if (gameObject.GetComponent<H_DraggingScript>() && gameObject.GetComponent<H_DraggingScript>().IsDraggable == true)
+        {
+            gameObject.GetComponent<H_DraggingScript>().LetTheH_Float();
+        }
     }
 
    
     
     void OnMouseDrag()
     {
-        if (TutorialSpeechBubbleScript.DraggingDisabled)
+        if (gameObject.GetComponent<H_DraggingScript>() && gameObject.GetComponent<H_DraggingScript>().IsDraggable == false)
         {
            
         }
@@ -47,6 +50,8 @@ public class DragIt : MonoBehaviour
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             rb.MovePosition(new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY));
             //transform.position = new Vector2(mousePosition.x-deltaX, mousePosition.y-deltaY);
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = 0f;
         }
 
 
@@ -59,7 +64,6 @@ public class DragIt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = 0f;
+        
     }
 }

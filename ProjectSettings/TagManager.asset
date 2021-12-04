@@ -7,18 +7,11 @@ TagManager:
   - CompleteMolecule
   - Hydrogen
   - Oxygen
-  - Peak
-  - Valley
   - Carbon
-  - ValleyDB
-  - PeakDB
   - Joule
-  - UnbondingTrigger
   - MCToken
-  - UnbondingTriggerDB
   - H2Molecule
   - Diatomic
-  - Radical
   - Chlorine
   - JouleInCorral
   - MovingGoldenJewel
@@ -29,12 +22,6 @@ TagManager:
   - OxygenUI
   - BondingTrigger
   - InternalBondingSite
-  - CO2UI
-  - CarbonDBUI
-  - ChlorineUI
-  - OxygenDBUI
-  - NitrogenUI
-  - HydrogenUI
   - CarbonUI
   - BondingTriggerDB
   - Nitrogen
@@ -42,6 +29,19 @@ TagManager:
   - AnimatedComplex
   - OH_Radical
   - H2O2
+  - Axe
+  - AxePart
+  - BigAxe
+  - SmallAxe
+  - ValleyDB
+  - PeakDB
+  - UnbondingTriggerDB
+  - Peak
+  - UnbondingTrigger
+  - Valley
+  - H+
+  - EnzymeSubstrate
+  - EnzymeHT
   layers:
   - Default
   - TransparentFX
