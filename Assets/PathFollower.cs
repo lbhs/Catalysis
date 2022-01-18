@@ -21,19 +21,24 @@ public class PathFollower : MonoBehaviour
     }
 
     #region Public Methods
-    public void MoveEnergyDiagramBall(float providedActivationEnergy, float requiredActivationEnergy)
+    public IEnumerator MoveEnergyDiagramBall(float providedActivationEnergy, float requiredActivationEnergy)
     {
-        float targetPos;
         if (providedActivationEnergy < requiredActivationEnergy)
         {
-            targetPos = Mathf.Lerp(0f, 0.3f, providedActivationEnergy / requiredActivationEnergy);
+            // Even if the object is scaled, 0.3 represents a time (proportion) on the path
+            float targetPos = Mathf.Lerp(0f, 0.3f, providedActivationEnergy / requiredActivationEnergy);
+
+            // Move up to the crest of the hill
+            yield return StartCoroutine(MoveToGivenTrackTime(targetPos));
+            yield return new WaitForSeconds(1f);
+            // Return to the base
+            yield return StartCoroutine(MoveToGivenTrackTime(0f));
         }
         else
         {
-            targetPos = 1f;
+            // Travel to the end of the path
+            yield return StartCoroutine(MoveToGivenTrackTime(1f));
         }
-
-        StartCoroutine(MoveToGivenTrackTime(targetPos));
     }
 
     public void ResetEnergyDiagramBall()
@@ -49,9 +54,20 @@ public class PathFollower : MonoBehaviour
         Vector3 currentPos = pathCreator.path.GetPointAtTime(time, EndOfPathInstruction.Stop);
         Vector3 targetPos = pathCreator.path.GetPointAtTime(targetTime, EndOfPathInstruction.Stop);
 
-        while (currentPos.x < targetPos.x)
+        int direction = currentPos.x < targetPos.x ? 1 : -1;
+
+        while (true)
         {
-            time += speedScale * Time.deltaTime;
+            // Moving backwards and the object is at or behind the requested position
+            if (direction == -1 && currentPos.x <= targetPos.x)
+                break;
+
+            // Moving forwards and the object is at or ahead of the requested position
+            if (direction == 1 && targetPos.x <= currentPos.x)
+                break;
+
+            time += direction * speedScale * Time.deltaTime;
+
             transform.position = pathCreator.path.GetPointAtTime(time, EndOfPathInstruction.Stop);
             currentPos = transform.position;
             yield return null;

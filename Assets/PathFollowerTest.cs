@@ -14,12 +14,12 @@ public class PathFollowerTest : MonoBehaviour
 
     public void SufficientActivationEnergy()
     {
-        pathFollower.MoveEnergyDiagramBall(53f, 47f);
+        StartCoroutine(pathFollower.MoveEnergyDiagramBall(53f, 47f));
     }
 
     public void InsufficientActivationEnergy()
     {
-        pathFollower.MoveEnergyDiagramBall(47f, 53f);
+        StartCoroutine(pathFollower.MoveEnergyDiagramBall(47f, 53f));
     }
 
     // Update is called once per frame
