@@ -7,6 +7,8 @@ public class WhenFlyInFinishes : MonoBehaviour  //attached to SubstrateFlyIn Gam
 {
     public GameObject InstantiationManager;
     public GameObject ProductManager;
+    public Animator SubstrateFlyIn;
+    public Animation SubstrateFlyInAnimation;
 
     
     //public GameObject H_Catalyst;
@@ -17,12 +19,13 @@ public class WhenFlyInFinishes : MonoBehaviour  //attached to SubstrateFlyIn Gam
     {
         InstantiationManager = GameObject.Find("InstantiationManager");
         ProductManager = GameObject.Find("ProductCountAndDisplayManager");
+        SubstrateFlyInAnimation["SubstrateFlyIn"].speed = InstantiationManager.GetComponent<InstantiationManagerScript>().AnimationSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        SubstrateFlyIn.speed = InstantiationManager.GetComponent<InstantiationManagerScript>().AnimationSpeed;  //need this to make the animation speed work!
     }
 
     public void WhenFlyInIsDone()  //triggered from the SubstrateFlyIn Animation

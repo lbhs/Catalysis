@@ -2647,6 +2647,7 @@ MonoBehaviour:
     type: 3}
   ThisIsTheEnzymeModel: 1
   EnzymeModelAtHighTemp: 1
+  HighTemp: 0
   Enzyme: {fileID: 1037079742976150507, guid: c3012c75c056b8c4aaf9bfbd26ca566f, type: 3}
   EnzymeSubstrate: {fileID: 793947103408406154, guid: 04c7eb89baeaaac439bb43ba26c1db8b,
     type: 3}
@@ -2654,7 +2655,7 @@ MonoBehaviour:
     type: 3}
   MeltedEnzyme: {fileID: 1462247820132348075, guid: 04e10fc6f539b224da8a5b7a667ee0b2,
     type: 3}
-  NormalSubstrateFlyIn: {fileID: 793947103408406154, guid: 53f743b0a9182d442aaf0214cdf18fe0,
+  NormalSubstrateFlyIn: {fileID: 793947103408406154, guid: 4e9e5cd20b761444bbe161ce905c0c06,
     type: 3}
   GreenZone: {fileID: 1353236796}
   GreenZone80: {fileID: 21300000, guid: c2f26c5eca3400645967c0d16da13148, type: 3}
@@ -2686,6 +2687,8 @@ MonoBehaviour:
   AxeListIndex: 0
   CatalystPresentInScene: 0
   ThrowAxeButton: {fileID: 1197222693}
+  AnimationSpeed: 3
+  AnimatedSubstrateComplex: {fileID: 0}
 --- !u!4 &568739743
 Transform:
   m_ObjectHideFlags: 0
@@ -9510,7 +9513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BigAxeDisplayIcon: {fileID: 1824413695}
   SmallAxeDisplayIcon: {fileID: 1075446384}
-  AxesRemaining: 20
+  AxesRemaining: 16
   BigAxeCount: 0
   SmallAxeCount: 0
   SuccessCountForBigAxe: 0
@@ -9522,6 +9525,7 @@ MonoBehaviour:
   CollisionEnergyTextBox: {fileID: 1020603462}
   NeedleOnDial: {fileID: 109334611}
   ThrowAxeButtonText: {fileID: 778220353}
+  ThrowAxeButton: {fileID: 0}
   ReturnToMainMenuButton: {fileID: 1587212879}
   Applause: {fileID: 1492266894}
 --- !u!4 &1740000924

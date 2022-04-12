@@ -2458,6 +2458,8 @@ MonoBehaviour:
   AxeListIndex: 0
   CatalystPresentInScene: 1
   ThrowAxeButton: {fileID: 1197222693}
+  AnimationSpeed: 4
+  AnimatedSubstrateComplex: {fileID: 0}
 --- !u!4 &568739743
 Transform:
   m_ObjectHideFlags: 0
@@ -8939,7 +8941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BigAxeDisplayIcon: {fileID: 7475794125772659539}
   SmallAxeDisplayIcon: {fileID: 7475794125857410514}
-  AxesRemaining: 20
+  AxesRemaining: 16
   BigAxeCount: 0
   SmallAxeCount: 0
   SuccessCountForBigAxe: 0

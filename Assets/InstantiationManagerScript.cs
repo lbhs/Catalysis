@@ -35,11 +35,15 @@ public class InstantiationManagerScript : MonoBehaviour  //Attached to Instantia
     //public bool EnzymePresentInScene;
     public Button ThrowAxeButton;
 
+    public float AnimationSpeed;  //this variable can be used to speed up the hydrolysis animation in catalyzed reactions!
+    public Animator AnimatedSubstrateComplex;  //This is the animation that shows water breaking bonds between the two sugars
+
     
     // Start is called before the first frame update
     void Start()
     {
         BringInANewSubstrateMolecule();  //Axe instantiation occurs at the end of the fly-in
+        //AnimatedSubstrateComplex.speed = AnimationSpeed;  //this public variable is set differently in the various scenes.  For uncatalyzed, AnimationSpeed = 0.5, Catalyzed, Hi Temp = 1
         
     }
 
@@ -52,7 +56,9 @@ public class InstantiationManagerScript : MonoBehaviour  //Attached to Instantia
     public void ShowAnimatedComplex()
     {
         
-        Instantiate(SubstrateAnimatedComplex);  //Activate animation of the substrate molecule--should show water atoms joining the glucose and fructose molecules--if catalyst was present, need to regenerate H+
+        GameObject NewAnimatedComplex = Instantiate(SubstrateAnimatedComplex);  //Activate animation of the substrate molecule--should show water atoms joining the glucose and fructose molecules--if catalyst was present, need to regenerate H+
+        //NewAnimatedComplex.GetComponent<Animator>().speed = AnimationSpeed;
+        //print("Newly instantiated complex at speed = " + AnimationSpeed);
     }
 
     public void BringInANewSubstrateMolecule()  //called from Start function of this script and from AnimatedComplexScript

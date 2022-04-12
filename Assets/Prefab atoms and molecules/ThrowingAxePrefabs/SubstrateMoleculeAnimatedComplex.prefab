@@ -665,6 +665,7 @@ MonoBehaviour:
   InstantiationManager: {fileID: 0}
   AxeCountDisplayManager: {fileID: 0}
   ProductCountAndDisplayManager: {fileID: 0}
+  SubstrateMoleculeAnimatedComplex: {fileID: 947452393657633627}
 --- !u!1 &5513033093948862821
 GameObject:
   m_ObjectHideFlags: 0

@@ -60,6 +60,22 @@ public class BondToBreakScript : MonoBehaviour  //This script is attached to the
                 RandomChance = Random.Range(0.5f, 1.0f);
                 print("BigAxe");
                 AxeIdentity = "Big";
+
+                if (InstantiationManager.GetComponent<InstantiationManagerScript>().HighTemp && AxeCountDisplayManager.GetComponent<AxeCountDisplayManagerScript>().SuccessCountForBigAxe == 0)
+                {
+                    if (RandomChance < 0.90)
+                    {
+                        RandomChance += 0.10f;  //increase chances of bond breakage at high temp without catalyst
+                        print("Random Chance bumped up at high temp");
+                    }
+
+                    if (AxeCountDisplayManager.GetComponent<AxeCountDisplayManagerScript>().AxesRemaining == 1)
+                    {
+                        RandomChance += 0.98f;
+                        print("sure thing");
+                    }
+
+                }
             }
             else 
             {
@@ -72,11 +88,19 @@ public class BondToBreakScript : MonoBehaviour  //This script is attached to the
                     if (RandomChance >.38f && RandomChance < .43f)
                     {
                         RandomChance += 0.05f;   //this is a boost to the odds of bond breaking at high temp--makes it more likely students will see increased bond breakage with catalyst at high temp
+
                     }
                 }
 
                 //if (!GameObject.Find("InstantiationManager").GetComponent<InstantiationManagerScript>().HighTemp && 
-                //MAKE IT IMPOSSIBLE TO GET A BOND BREAK COUNT ABOUT 8 IN THE LOW TEMP WITH CATALYST SCENARIO--CHECK SMALLAXESUCCESSES AND MAKE RANDOMCHANCE SMALL IF AT THE LIMIT
+                //MAKE IT IMPOSSIBLE TO GET A BOND BREAK COUNT ABOVE 7 IN THE LOW TEMP WITH CATALYST SCENARIO--CHECK SMALLAXESUCCESSES AND MAKE RANDOMCHANCE SMALL IF AT THE LIMIT
+                if(!InstantiationManager.GetComponent<InstantiationManagerScript>().HighTemp && AxeCountDisplayManager.GetComponent<AxeCountDisplayManagerScript>().SuccessCountForSmallAxe > 2)
+                {
+                    RandomChance = Random.Range(0.10f, 0.39f);
+                    print("downgraded Random Chance, as already have broken enough bonds");
+                }
+
+                
 
             }
         }

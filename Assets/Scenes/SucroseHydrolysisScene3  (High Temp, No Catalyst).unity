@@ -2669,12 +2669,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefc70342a4c55a49bf6040fe7943c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SubstrateFlyIn: {fileID: 793947103408406154, guid: 53f743b0a9182d442aaf0214cdf18fe0,
+  SubstrateFlyIn: {fileID: 793947103408406154, guid: 4e9e5cd20b761444bbe161ce905c0c06,
     type: 3}
   SubstrateAnimatedComplex: {fileID: 5513033093474139253, guid: 4bf604c123416354b8978c475261870b,
     type: 3}
   ThisIsTheEnzymeModel: 0
   EnzymeModelAtHighTemp: 0
+  HighTemp: 1
   Enzyme: {fileID: 0}
   EnzymeSubstrate: {fileID: 0}
   Enzyme_SubstrateComplex: {fileID: 0}
@@ -2710,6 +2711,8 @@ MonoBehaviour:
   AxeListIndex: 0
   CatalystPresentInScene: 0
   ThrowAxeButton: {fileID: 1197222693}
+  AnimationSpeed: 1.5
+  AnimatedSubstrateComplex: {fileID: 0}
 --- !u!4 &568739743
 Transform:
   m_ObjectHideFlags: 0
@@ -11304,6 +11307,11 @@ PrefabInstance:
       propertyPath: NeedleOnDial
       value: 
       objectReference: {fileID: 362502847}
+    - target: {fileID: 1522963186154297522, guid: c2d6af8a63bc4344380a2ab08937d863,
+        type: 3}
+      propertyPath: AxesRemaining
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1522963186154297522, guid: c2d6af8a63bc4344380a2ab08937d863,
         type: 3}
       propertyPath: BigAxeDisplayIcon
